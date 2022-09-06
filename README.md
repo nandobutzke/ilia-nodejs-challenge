@@ -6,7 +6,7 @@
 ## The Challenge:
 One of the ília Digital verticals is Financial and to level your knowledge we will do a Basic Financial Application and for that we divided this Challenge in 2 Parts.
 
-The first part is mandatory, which is to create a Wallet microservice to store the users' transactions, the second part is optional (except for Seniors, it's mandatory) which is to create a Users Microservice with integration between the two microservices (Wallet and Users), using internal communications between them, being in gRPC, REST, Kafka, RabbitMQ and this communication must have a different security of the external application (JWT, SSL, ...), Development in javascript (Node) is desirable, but not required.
+The first part is mandatory, which is to create a Wallet microservice to store the users' transactions, the second part is optional (except for Seniors, it's mandatory) which is to create a Users Microservice with integration between the two microservices (Wallet and Users), using internal communications between them, being in gRPC, REST, Kafka, RabbitMQ and this communication must have a different security of the external application (JWT, SSL, ...), **Development in javascript (Node) is required.**
 
 ![diagram](diagram.png)
 
@@ -53,7 +53,7 @@ This microservice must be a digital Wallet where the user transactions will be s
 ## O Desafio:
 Uma das verticais da ília Digital é a Financeira e para nivelar seus conhecimentos iremos fazer uma Aplicação Financeira Básica e para isso dividimos esse Desafio em 2 Partes.
 
-Sendo a 1ª Parte obrigatória que é criar um Microserviço de Wallet para guardar as transações de usuários, já a segunda 2ª Parte é opcional (com exceção dos Seniors, é obrigatório) que é criar um Microserviço de Usuários com Integração entre os 2 Microserviços (Wallet e Users), usando comunicações interna entre eles, sendo em gRPC, REST, Kafka, RabbitMQ e essa comunicação deve ter uma segurança diferente da aplicação externa (JWT, SSL, …), Desejavel mas não obrigatório, o desenvolvimento em javascript (Node).
+Sendo a 1ª Parte obrigatória que é criar um Microserviço de Wallet para guardar as transações de usuários, já a segunda 2ª Parte é opcional (com exceção dos Seniors, é obrigatório) que é criar um Microserviço de Usuários com Integração entre os 2 Microserviços (Wallet e Users), usando comunicações interna entre eles, sendo em gRPC, REST, Kafka, RabbitMQ e essa comunicação deve ter uma segurança diferente da aplicação externa (JWT, SSL, …), **Obrigatório o desenvolvimento em javascript (Node).**
 
 ![diagram](diagram.png)
 
