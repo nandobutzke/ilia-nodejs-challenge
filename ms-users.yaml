@@ -20,7 +20,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Users'
+              $ref: '#/components/schemas/UserRequest'
       tags:
         - Users
       responses:
@@ -55,7 +55,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Users'
+              $ref: '#/components/schemas/UserRequest'
       tags:
         - Users
       security: 
@@ -118,6 +118,22 @@ paths:
   
 components:
   schemas:
+    UserRequest:
+      type: object
+      required:
+      - first_name
+      - last_name
+      - password
+      - email
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
     Users:
       type: object
       required:
