@@ -21,6 +21,12 @@ export class UsersService {
     return user;
   }
 
+  async findAll() {
+    const users = await this.usersRepository.findAll();
+
+    return users;
+  }
+
   async update(userId: string, updateUserDto: UpdateUserDto) {
     const { firstName, lastName, email, password } = updateUserDto;
 
