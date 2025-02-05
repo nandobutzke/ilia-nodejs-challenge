@@ -12,6 +12,11 @@ export class UsersController {
     return this.usersService.findUnique(userId);
   }
 
+  @Get()
+  list() {
+    return this.usersService.findAll();
+  }
+
   @Patch()
   update(@ActiveUserId() userId: string, @Body() updateUserDto: UpdateUserDto) {
     return this.usersService.update(userId, updateUserDto);
