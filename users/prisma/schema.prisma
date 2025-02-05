@@ -13,14 +13,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Transaction {
-  id       String @id @default(uuid()) @db.Uuid
-  user_id  String 
-  amount   Float
-  type     TransactionType
-}
-
-enum TransactionType {
-  CREDIT
-  DEBIT
+model User {
+  id            String @id @db.Uuid @default(uuid())
+  first_name     String
+  last_name     String
+  password      String
+  email         String @unique
 }
