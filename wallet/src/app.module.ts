@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { TransactionsModule } from './modules/transactions/transactions.module';
+import { TransactionsModule } from './modules/wallet/wallet.module';
 
 @Module({
   imports: [

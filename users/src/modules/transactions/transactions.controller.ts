@@ -12,6 +12,11 @@ export class TransactionsController {
     return this.transactionsService.listUserTransactions(userId);
   }
 
+  @Get('balance')
+  getBalance(@ActiveUserId() userId: string) {
+    return this.transactionsService.getUserBalance(userId);
+  }
+
   @Post()
   create(
     @ActiveUserId() userId: string,

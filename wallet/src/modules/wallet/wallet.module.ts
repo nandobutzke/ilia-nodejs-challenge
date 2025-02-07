@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { TransactionsService } from './transactions.service';
-import { TransactionsController } from './transactions.controller';
+import { WalletService } from './wallet.service';
+import { WalletController } from './wallet.controller';
 import { TransactionSchema } from 'src/shared/database/schemas/transaction.schema';
 
 @Module({
@@ -10,7 +10,7 @@ import { TransactionSchema } from 'src/shared/database/schemas/transaction.schem
       { name: 'Transaction', schema: TransactionSchema },
     ]),
   ],
-  controllers: [TransactionsController],
-  providers: [TransactionsService],
+  controllers: [WalletController],
+  providers: [WalletService],
 })
 export class TransactionsModule {}
