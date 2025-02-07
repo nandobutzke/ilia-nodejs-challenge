@@ -20,9 +20,7 @@ export class TransactionsService {
     userId: string,
     createTransactionDto: CreateTransactionDto,
   ) {
-    console.log(userId, createTransactionDto);
-
-    return this.client.send('create-transaction', {
+    return this.client.emit('create-transaction', {
       userId,
       ...createTransactionDto,
     });
@@ -30,5 +28,9 @@ export class TransactionsService {
 
   listUserTransactions(userId: string) {
     return this.client.send('list-transactions', userId);
+  }
+
+  getUserBalance(userId: string) {
+    return this.client.send('get-balance', userId);
   }
 }
