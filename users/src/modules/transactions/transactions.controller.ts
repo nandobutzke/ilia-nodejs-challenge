@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { TransactionsService } from './transactions.service';
+import { Body, Controller, Get, Post, Req } from '@nestjs/common';
+import { TransactionsService } from './services/transactions.service';
 import { ActiveUserId } from 'src/shared/decorators/ActiveUserId';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 
@@ -8,17 +8,15 @@ export class TransactionsController {
   constructor(private readonly transactionsService: TransactionsService) {}
 
   @Get()
-  list(@ActiveUserId() userId: string) {
-    return this.transactionsService.listUserTransactions(userId);
-  }
+  list(@Req() request: Request, @ActiveUserId() userId: string) {
+    console.log(request['token']);
 
-  @Get('balance')
-  getBalance(@ActiveUserId() userId: string) {
-    return this.transactionsService.getUserBalance(userId);
+    return this.transactionsService.listUserTransactions(userId);
   }
 
   @Post()
   create(
+    @Req() request: Request,
     @ActiveUserId() userId: string,
     @Body() createTransactionDto: CreateTransactionDto,
   ) {
@@ -26,5 +24,10 @@ export class TransactionsController {
       userId,
       createTransactionDto,
     );
+  }
+
+  @Get('balance')
+  getBalance(@ActiveUserId() userId: string) {
+    return this.transactionsService.getUserBalance(userId);
   }
 }

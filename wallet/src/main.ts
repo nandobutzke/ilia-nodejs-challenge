@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
@@ -11,7 +12,7 @@ async function bootstrap() {
   app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.RMQ,
     options: {
-      urls: ['amqp://localhost:5672'], // Set your RabbitMQ credentials
+      urls: ['amqp://rabbitmq:5672'], // Set your RabbitMQ credentials
       queue: 'create-transaction',
       queueOptions: {
         durable: false,
