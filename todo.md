@@ -9,9 +9,10 @@
 - [x]  Retornar os dados do usuário logado após o login /auth
 - [x]  Buscar todas as transações de um usuário (usuário autenticado)
 - [x]  Criar uma nova transação com o id do usuário logado
-- [ ]  Autenticação interna na comunicação com a wallet
-- [ ]  Calcular balanço das transações de um usuário
+- [x]  Calcular balanço das transações de um usuário
 
 # RNFs
 
 - [x]  Criar validação das rotas para o usuário logado
+- [ ]  Autenticação interna na comunicação com a wallet
+- [ ]  Criar arquivo docker compose para rodar os microserviços em containers separados

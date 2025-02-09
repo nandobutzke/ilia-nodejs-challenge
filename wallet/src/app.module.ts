@@ -1,12 +1,10 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { TransactionsModule } from './modules/wallet/wallet.module';
+import { env } from './shared/config/env';
 
 @Module({
-  imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/nest'),
-    TransactionsModule,
-  ],
+  imports: [MongooseModule.forRoot(env.mongoUrl), TransactionsModule],
   controllers: [],
   providers: [],
 })
